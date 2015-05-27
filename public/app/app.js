@@ -16,14 +16,14 @@
 		$scope.someVar = "Does this even work?"; 
 	});
 
-	// app.directive('testDirective', function(){
-	// 	return {
-	// 		restrict: 'A',
-	// 		templateUrl: 'partials/main.jade',
-	// 		controller: function(scope){
-	// 			console.log("Test");
-	// 		}
-	// 	}
-	// });
+	app.directive('testDirective', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'partials/main.jade',
+			controller: function(scope){
+				console.log("Test");
+			}
+		}
+	});
 
 })();
