@@ -1,14 +1,22 @@
 (function(){
 	var app = angular.module('dashboard', ['ngResource', 'ngRoute']);
 	
-	app.config(function($routeProvider, $locationProvider){
-		$locationProvider.html5Mode(true);
-		$routeProvider
-			.when('/', {templateUrl: '/partials/main', controller: 'mainCtrl'});
-	});
+	// app.config(function($routeProvider, $locationProvider){
+	// 	$locationProvider.html5Mode({
+	// 		enabled: true,
+	// 		requireBase: false
+	// 	});
+	// 	$routeProvider
+	// 		.when('/', 
+	// 			{
+	// 				templateUrl: 'main', 
+	// 				controller: 'mainCtrl'
+	// 			}
+	// 		);
+	// });
 
 	app.controller('mainCtrl', function($scope){
-		$scope.someVar = "Hello World"; 
+		$scope.someVar = "Hello Angular"; 
 	});
 
 	app.directive('testDirective', function(){
