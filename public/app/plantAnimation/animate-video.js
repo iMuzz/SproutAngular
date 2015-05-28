@@ -3,11 +3,14 @@ app.directive('animateVideo', function(){
 		restrict: 'E',
 		templateUrl: '/partials/videoFrame.jade', 
 		scope: {
-			videoUrl: '@videourl'
+			videoUrl: '@videourl',
+			percentage: '=percentage'
 		},
 		controller: function($scope){
 			$scope.test = function(){
 				console.log($scope.videoUrl);
+				console.log($scope.percentage  = $scope.percentage + .1);
+
 			};
 		},
 	}

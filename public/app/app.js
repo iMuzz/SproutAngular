@@ -12,4 +12,8 @@ app.config(function($routeProvider, $locationProvider){
 });
 
 app.controller('dashCtrl', function($scope){
+	$scope.userName = "Julia Winehart";
+	$scope.loanBalance = 19852;
+	$scope.creditScore = 649;
+	$scope.plantScore = 649;
 });
