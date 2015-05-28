@@ -6,11 +6,10 @@ app.config(function($routeProvider, $locationProvider){
 		.when('/', 
 			{
 				templateUrl: '/partials/main.jade', 
-				controller: 'mainCtrl'
+				controller: 'dashCtrl'
 			}
 		);
 });
 
-app.controller('mainCtrl', function($scope){
-	$scope.someVar = "Does this even work?"; 
+app.controller('dashCtrl', function($scope){
 });

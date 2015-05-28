@@ -3,11 +3,11 @@ app.directive('animateVideo', function(){
 		restrict: 'E',
 		templateUrl: '/partials/videoFrame.jade', 
 		scope: {
-			videourl: '@videourl'
+			videoUrl: '@videourl'
 		},
 		controller: function($scope){
 			$scope.test = function(){
-				console.log($scope.videourl);
+				console.log($scope.videoUrl);
 			};
 		},
 	}
