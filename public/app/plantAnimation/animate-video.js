@@ -1,11 +1,14 @@
 app.directive('animateVideo', function(){
 	return {
 		restrict: 'E',
-		templateUrl: '/partials/videoFrame.jade',
+		templateUrl: '/partials/videoFrame.jade', 
+		scope: {
+			videourl: '@videourl'
+		},
 		controller: function($scope){
 			$scope.test = function(){
-				console.log("The button was clicked!");
+				console.log($scope.videourl);
 			};
-		}
+		},
 	}
 });

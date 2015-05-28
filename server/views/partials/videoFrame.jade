@@ -1,2 +1,12 @@
-div(ng-click="test()")
-	"This is just a test"
+div.tree_wrapper(ng-click="test()")
+	h4 Your Credit Score
+	.tree
+		.credit_info.clearfix
+			.credit_score#score: span.vcenter#cscore 0
+			.credit_score.credit_change
+				span.vcenter#csinc 0
+				span.last-credit-check since 3/15/15
+		.goals-overlay
+			h4 Your Goal
+		.icon-load-wheel
+		video#my-video(src="{{videourl}}" controls)
