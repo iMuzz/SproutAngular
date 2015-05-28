@@ -15,3 +15,14 @@ app.directive('animateVideo', function(){
 		},
 	}
 });
+
+app.directive('startVideo', function(){
+	return {
+		restrict: 'A',
+		link: function(scope, el, attrs){
+			setTimeout(function(){ 
+				el[0].play();
+			}, 1000);
+		}
+	}
+});
