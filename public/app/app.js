@@ -11,6 +11,6 @@ app.config(function($routeProvider, $locationProvider){
 		);
 });
 
-app.controller('dashCtrl', ['$scope', '$http','UserData', function($scope, $http, UserData){
+app.controller('dashCtrl', ['$scope', 'UserData', function($scope, UserData){
 	$scope.user = UserData;
 }]);
