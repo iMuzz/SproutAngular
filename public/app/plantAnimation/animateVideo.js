@@ -15,13 +15,13 @@ app.directive('animateVideo', function(){
 app.directive('startVideo', function(){
 	return {
 		restrict: 'A',
-		scope: true,
 		link: function(scope, el, attrs){
 			var video = el[0];
 
 			setTimeout(function(){ 
 				scope.vidLength = video.duration;
-				resumeToSec(scope.playToPerc * scope.vidLength);
+				// resumeToSec(scope.playToPerc * scope.vidLength);
+				resumeToSec(2);
 				video.play();
 			}, 1000);
 
