@@ -1,7 +1,7 @@
-app.directive('animateVideo', function(){
+app.directive('videoPanel', function(){
 	return {
 		restrict: 'E',
-		templateUrl: '/partials/videoFrame.jade', 
+		templateUrl: '/partials/videoPanel.jade', 
 		scope: {
 			videoUrl: '@videourl',
 			percentage: '=percentage'
@@ -20,8 +20,8 @@ app.directive('startVideo', function(){
 
 			setTimeout(function(){ 
 				scope.vidLength = video.duration;
-				// resumeToSec(scope.playToPerc * scope.vidLength);
-				resumeToSec(2);
+				resumeToSec(scope.playToPerc * scope.vidLength);
+				// resumeToSec(2);
 				video.play();
 			}, 1000);
 
