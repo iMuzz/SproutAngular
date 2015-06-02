@@ -25,7 +25,7 @@ app.directive('startVideo', function(){
 				video.play();
 			}, 1000);
 
-			function resumeToSec(stopTime){
+			var resumeToSec = function(stopTime){
 				scope.endTime = stopTime;
 				video.addEventListener("timeupdate", pauseAtTime);
 
