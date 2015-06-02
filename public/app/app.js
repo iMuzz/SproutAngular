@@ -11,15 +11,6 @@ app.config(function($routeProvider, $locationProvider){
 		);
 });
 
-app.factory('UserDataFactory', function(){
-	return {
-		userName: "Julia Winehart",
-		loanBalance: 19852,
-		creditScore: 649,
-		plantScore: 649
-	};
-});
-
-app.controller('dashCtrl', ['$scope', '$http','UserDataFactory', function($scope, $http, UserDataFactory){
-	$scope.user = UserDataFactory;
+app.controller('dashCtrl', ['$scope', '$http','UserData', function($scope, $http, UserData){
+	$scope.user = UserData;
 }]);

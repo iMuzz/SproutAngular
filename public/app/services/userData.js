@@ -1,8 +1,8 @@
-// app.factory('userData', ['', function(){
-// 	return {
-// 		userName: "Julia Winehart",
-// 		loanBalance: 19852,
-// 		creditScore: 649,
-// 		plantScore: 649
-// 	};
-// }])
+app.factory('UserData', function(){
+	return {
+		userName: "Julia Winehart",
+		loanBalance: 19852,
+		creditScore: 649,
+		plantScore: 649
+	};
+});
