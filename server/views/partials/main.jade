@@ -3,7 +3,9 @@ div
 	p {{user.loanBalance}}
 	p {{user.creditScore}}
 	p {{user.plantScore}}
+	br
+	br
 div.credit-simulation(ng-controller="simulationCtrl")
 	button(ng-click="modifyPlantScore(10)") Increase 10	
 	button(ng-click="modifyPlantScore(20)") Increase 20	
-video-panel(videourl="/videos/tree.mp4" percentage="user.plantScore")
+video-panel(videourl="/videos/tree.mp4" percentage="{{user.plantScore}}" test-directive="user.plantScore")
