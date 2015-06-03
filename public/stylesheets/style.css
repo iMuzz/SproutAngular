@@ -1,3 +1,4 @@
+
 html, body{
 	width: 100%;
 	background-color: #0295be;
@@ -34,18 +35,24 @@ body {
 }
 
 .credit-dashboard {
-	background-color: white;
 	height: 100%;
 	width: 67%;
 	float: right;
 }
 
-.credit-simulation {
+.dash-base {
 	background-color: white;
-	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.credit-simulation {
+	padding: 25px;
 }
 .sim-row {
 	margin-top: 25px;
+}
+.first-row {
+	margin: 0px;
 }
 .simulation {
 	text-align: center;

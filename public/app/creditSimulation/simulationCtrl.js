@@ -5,8 +5,4 @@ app.controller('simulationCtrl', ['$scope', 'UserData', function($scope, UserDat
 	$scope.modifyPlantScore = function(num){
 		$scope.user.changePlantScore(num);
 	};
-	
-	$scope.testMethod = function(argument) {
-		console.log(argument);
-	}
 }])

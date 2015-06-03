@@ -1,20 +1,20 @@
 div.credit-health
 	video-panel(videourl="/videos/tree.mp4" percentage="{{user.plantScore}}" animate-video="user.plantScore")
 div.credit-dashboard
-	div.credit-simulation(ng-controller="simulationCtrl")
+	div.dash-base.some
+		p {{user.userName}}
+		p {{user.loanBalance}}
+		p {{user.creditScore}}
+		p {{user.plantScore}}
+	div.dash-base.credit-simulation(ng-controller="simulationCtrl")
 		div
-			div.clearfix.sim-row
+			div.clearfix.sim-row.first-row
 				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
 				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
 				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
-				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
 			div.clearfix.sim-row
 				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
 				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
 				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
 				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")
-	div.some
-		p {{user.userName}}
-		p {{user.loanBalance}}
-		p {{user.creditScore}}
-		p {{user.plantScore}}

@@ -13,6 +13,8 @@ app.directive('simulationButton', function(){
 				return num * -1;
 			}
 
+			// This directive probably knows too much about how the plantScore should work
+			// right now it knows that every time this button is clicked the value needs to be flipped in order for scoreChange to do the right thing
 			scope.activateButton = function(){
 				if (active) {
 					el.find(".simulation").removeClass("sim-active")
