@@ -8,7 +8,7 @@ app.directive('videoPanel', function(){
 	}
 });
 
-app.directive('testDirective', function(){
+app.directive('animateVideo', function($interval){
 	return {
 		restrict: 'A',
 		link: function(scope, el, attrs) {
@@ -23,6 +23,7 @@ app.directive('testDirective', function(){
 			}
 
 			var resumeToSec = function(stopTime){
+				console.log(stopTime)
 				endTime = stopTime;
 				video.addEventListener("timeupdate", pauseAtTime);
 				video.play();
@@ -30,8 +31,6 @@ app.directive('testDirective', function(){
 
 			var pauseAtTime = function(){
 				if (video.currentTime >= endTime) {
-					console.log("endTime = " + endTime)
-					console.log("video.currentTime = " + video.currentTime)
 					video.pause();
 					video.removeEventListener("timeupdate", pauseAtTime)
 				};
@@ -41,15 +40,35 @@ app.directive('testDirective', function(){
 				return inputPercentage * video.duration
 			}
 
-			initialPlayToPerc = calculatePercentage(attrs['percentage']);
+			var rewindToSeconds = function(seconds){
+				var currTime = video.currentTime * 100 | 0;
+				var seconds = seconds * 100 | 0;
+				function frame(){
+					currTime -= 5;
+					video.currentTime = currTime / 100;
+					console.log(video.currentTime)
+
+					if (currTime <= seconds) {
+						$interval.cancel(promise)
+					}; 
+
+				}
+				var promise = $interval(frame, 50)
+			}
+
 			setTimeout(function(){ 
+				initialPlayToPerc = calculatePercentage(attrs['percentage']);
 				scope.vidLength = video.duration;
 				resumeToSec(initialPlayToPerc * scope.vidLength);
 				video.play();
 			}, 1000);
 
-			scope.$watch(attrs['testDirective'], function(newVal, oldVal){
-				resumeToSec(percentageToSeconds(calculatePercentage(newVal)));
+			scope.$watch(attrs['animateVideo'], function(newVal, oldVal){
+				if (newVal > oldVal) {
+					resumeToSec(percentageToSeconds(calculatePercentage(newVal)));
+				} else {
+					rewindToSeconds(percentageToSeconds(calculatePercentage(newVal)));
+				};
 			});
 		}
 	}
