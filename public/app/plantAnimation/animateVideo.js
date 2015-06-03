@@ -11,6 +11,7 @@ app.directive('videoPanel', function(){
 app.directive('animateVideo', function($interval){
 	return {
 		restrict: 'A',
+		replace: true,
 		link: function(scope, el, attrs) {
 			
 			var MAX_CREDIT_SCORE = 850;
@@ -46,7 +47,6 @@ app.directive('animateVideo', function($interval){
 				function frame(){
 					currTime -= 5;
 					video.currentTime = currTime / 100;
-					console.log(video.currentTime)
 
 					if (currTime <= seconds) {
 						$interval.cancel(promise)
