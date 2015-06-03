@@ -6,7 +6,6 @@ html, body{
 }
 
 body {
-	padding: 0 18.75%;
 	min-height: 100%;
 }
 
@@ -30,8 +29,8 @@ body {
 }
 
 .credit-health {
-	width: 30%;
-	float: left;
+	width: 300px;
+	position: fixed;
 }
 
 .credit-dashboard {
@@ -40,13 +39,18 @@ body {
 	float: right;
 }
 
+.main-content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
 .dash-base {
 	background-color: white;
 	margin-top: 25px;
 }
 
 .credit-simulation {
-	padding: 25px;
+	padding: 3.731344%;
 }
 .sim-row {
 	margin-top: 25px;
@@ -63,7 +67,7 @@ body {
 	background-color: red;
 	float: left;
 	width: 25%;
-	height: 118.611px;
+	height: 106.111px;
 }
 #my-video {
 	width: 100%;

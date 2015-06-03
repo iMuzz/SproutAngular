@@ -6,6 +6,16 @@ div.credit-dashboard
 		p {{user.loanBalance}}
 		p {{user.creditScore}}
 		p {{user.plantScore}}
+	div.dash-base.some
+		p {{user.userName}}
+		p {{user.loanBalance}}
+		p {{user.creditScore}}
+		p {{user.plantScore}}
+	div.dash-base.some
+		p {{user.userName}}
+		p {{user.loanBalance}}
+		p {{user.creditScore}}
+		p {{user.plantScore}}
 	div.dash-base.credit-simulation(ng-controller="simulationCtrl")
 		div
 			div.clearfix.sim-row.first-row
@@ -18,3 +28,39 @@ div.credit-dashboard
 				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
 				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
 				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")
+	div.dash-base.credit-simulation(ng-controller="simulationCtrl")
+		div
+			div.clearfix.sim-row.first-row
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+			div.clearfix.sim-row
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")
+	div.dash-base.credit-simulation(ng-controller="simulationCtrl")
+		div
+			div.clearfix.sim-row.first-row
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+			div.clearfix.sim-row
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")
+	div.dash-base.credit-simulation(ng-controller="simulationCtrl")
+		div
+			div.clearfix.sim-row.first-row
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+			div.clearfix.sim-row
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")							
