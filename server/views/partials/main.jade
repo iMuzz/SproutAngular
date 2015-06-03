@@ -4,21 +4,15 @@ div.credit-dashboard
 	div.credit-simulation(ng-controller="simulationCtrl")
 		div
 			div.clearfix.sim-row
-				div.simulation(ng-click="modifyPlantScore(-200)")
-					div.vert-center Decrease -200
-				div.simulation(ng-click="modifyPlantScore(-200)")
-					div.vert-center Decrease -200
-				div.simulation(ng-click="modifyPlantScore(-200)")
-					div.vert-center Decrease -200
-				div.simulation(ng-click="modifyPlantScore(-200)")
-					div.vert-center Decrease -200				
+				simulation-button(score-change="-200")
+				simulation-button
+				simulation-button
+				simulation-button				
 			div.clearfix.sim-row
 				div.simulation(ng-click="modifyPlantScore(200)") Increase 200
 				div.simulation(ng-click="modifyPlantScore(200)") Increase 200
 				div.simulation(ng-click="modifyPlantScore(200)") Increase 200
 				div.simulation(ng-click="modifyPlantScore(200)") Increase 200		
-		//- button.btn.btn-default(ng-click="modifyPlantScore(-200)") Decrease -200	
-		//- button.btn.btn-info(ng-click="modifyPlantScore(200)") Increase 200	
 	div.some
 		p {{user.userName}}
 		p {{user.loanBalance}}
