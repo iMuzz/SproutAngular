@@ -6,6 +6,6 @@ div
 	br
 	br
 div.credit-simulation(ng-controller="simulationCtrl")
-	button(ng-click="modifyPlantScore(-100)") Decrease -100	
-	button(ng-click="modifyPlantScore(200)") Increase 200	
+	button.btn.btn-default(ng-click="modifyPlantScore(-200)") Decrease -200	
+	button.btn.btn-info(ng-click="modifyPlantScore(200)") Increase 200	
 video-panel(videourl="/videos/tree.mp4" percentage="{{user.plantScore}}" animate-video="user.plantScore")
