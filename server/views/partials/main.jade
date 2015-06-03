@@ -1,10 +1,26 @@
 div.credit-health
 	video-panel(videourl="/videos/tree.mp4" percentage="{{user.plantScore}}" animate-video="user.plantScore")
-div.credit-dashboard(ng-controller="simulationCtrl")
-	button.btn.btn-default(ng-click="modifyPlantScore(-200)") Decrease -200	
-	button.btn.btn-info(ng-click="modifyPlantScore(200)") Increase 200	
-//- div.some
-//- 	p {{user.userName}}
-//- 	p {{user.loanBalance}}
-//- 	p {{user.creditScore}}
-//- 	p {{user.plantScore}}
+div.credit-dashboard
+	div.credit-simulation(ng-controller="simulationCtrl")
+		div
+			div.clearfix.sim-row
+				div.simulation(ng-click="modifyPlantScore(-200)")
+					div.vert-center Decrease -200
+				div.simulation(ng-click="modifyPlantScore(-200)")
+					div.vert-center Decrease -200
+				div.simulation(ng-click="modifyPlantScore(-200)")
+					div.vert-center Decrease -200
+				div.simulation(ng-click="modifyPlantScore(-200)")
+					div.vert-center Decrease -200				
+			div.clearfix.sim-row
+				div.simulation(ng-click="modifyPlantScore(200)") Increase 200
+				div.simulation(ng-click="modifyPlantScore(200)") Increase 200
+				div.simulation(ng-click="modifyPlantScore(200)") Increase 200
+				div.simulation(ng-click="modifyPlantScore(200)") Increase 200		
+		//- button.btn.btn-default(ng-click="modifyPlantScore(-200)") Decrease -200	
+		//- button.btn.btn-info(ng-click="modifyPlantScore(200)") Increase 200	
+	div.some
+		p {{user.userName}}
+		p {{user.loanBalance}}
+		p {{user.creditScore}}
+		p {{user.plantScore}}

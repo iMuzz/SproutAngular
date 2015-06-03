@@ -1,12 +1,19 @@
 html, body{
 	width: 100%;
 	background-color: #0295be;
+	min-height: 100%;
 }
 
 body {
 	padding: 0 18.75%;
+	min-height: 100%;
 }
 
+.vert-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -24,13 +31,32 @@ body {
 .credit-health {
 	width: 30%;
 	float: left;
-	/*border: solid;*/
 }
 
 .credit-dashboard {
+	background-color: white;
+	height: 100%;
 	width: 67%;
 	float: right;
+}
 
+.credit-simulation {
+	background-color: white;
+	margin-bottom: 25px;
+}
+.sim-row {
+	margin-top: 25px;
+}
+.simulation {
+	text-align: center;
+	border-left: solid;
+	border-right: solid;
+	border-width: 25px;
+	border-color: white;
+	background-color: red;
+	float: left;
+	width: 25%;
+	height: 118.611px;
 }
 #my-video {
 	width: 100%;
