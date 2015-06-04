@@ -44,7 +44,7 @@ app.directive('animateVideo', function($interval){
 				var currTime = video.currentTime * 100 | 0;
 				var seconds = seconds * 100 | 0;
 				function frame(){
-					currTime -= 5;
+					currTime -= 1;
 					video.currentTime = currTime / 100;
 
 					if (currTime <= seconds) {

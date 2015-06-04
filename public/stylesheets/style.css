@@ -143,8 +143,16 @@ img#logo {
 	float: left;
 	width: 25%;
 	height: 106.111px;
+	-webkit-transition-property: top;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: .1s;
+	-webkit-transition-timing-function: linear;
 }
 
+.simulation:hover {
+	position: relative;
+	top: -3px;
+}
 .sim-wrap {
 	color: white;
 	padding: 0 10px;
