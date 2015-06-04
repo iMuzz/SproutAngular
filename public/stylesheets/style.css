@@ -7,6 +7,7 @@ html, body{
 
 body {
 	min-height: 100%;
+	font: 14px myFirstFont,Helvetica,Arial,sans-serif;
 }
 
 .vert-center {
@@ -28,9 +29,14 @@ body {
   zoom: 1; /* ie 6/7 */
 }
 
+.main-content {
+	width: 1000px;
+	margin: 0 auto;
+}
 .credit-health {
 	width: 300px;
 	position: fixed;
+	top: 25px;
 }
 
 .credit-dashboard {
@@ -39,9 +45,25 @@ body {
 	float: right;
 }
 
-.main-content {
-	width: 1000px;
-	margin: 0 auto;
+.cred-summary {
+	/*padding: 25px 0px;*/
+}
+
+.summary-cell {
+	height: 60px;
+	display: table;
+}
+
+.summary-cell p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.summary-cell h2 {
+	display: table-cell;
+	vertical-align: middle;
+	color: #f17123;
+	font-size: 18px;
 }
 
 .dash-base {
