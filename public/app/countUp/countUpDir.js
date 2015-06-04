@@ -2,7 +2,7 @@ app.directive("countUp", function(){
 	return {
 		restrict: 'A',
 		scope: {
-			endValue: '=tuCscore'
+			endValue: '=cuEndVal'
 		},
 		link: function(scope, el, attrs){
 			var numAnim = new CountUp(el[0].id, 0, scope.endValue, 0, 4);
@@ -13,14 +13,16 @@ app.directive("countUp", function(){
 				animation.start();
 			}
 
-			var watchInitializing = true;
-			scope.$watch(function() { return attrs["tuVal"]; }, function(newVal, oldVal){
-				if (watchInitializing) {
-					watchInitializing = false;
-				} else {
-					changeTo(newVal, oldVal);
-				};
-			});
+			if (attrs["cuChangingVal"] !== undefined ) {
+				var watchInitializing = true;
+				scope.$watch(function() { return attrs["cuChangingVal"]; }, function(newVal, oldVal){
+					if (watchInitializing) {
+						watchInitializing = false;
+					} else {
+						changeTo(newVal, oldVal);
+					};
+				});
+			};
 		}
 	}
 });
