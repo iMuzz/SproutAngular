@@ -1,3 +1,8 @@
+// To use this directive 
+// 1. Add an ID to the element.
+// 2. Add the attribute 'count-up' to the element.
+// 3. Add the attribute 'cu-end-val="Your_value"' to the element with the value that you want to count to.
+
 app.directive("countUp", function(){
 	return {
 		restrict: 'A',
