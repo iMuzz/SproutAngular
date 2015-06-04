@@ -4,15 +4,15 @@ div.credit-health
 	h4.font-white You Credit Score
 	div.cred-score-container.clearfix
 		div.cred-score 
-			p#cscore.vert-center(count-up tu-cscore="user.plantScore" tu-val="{{user.plantScore}}")
+			p#cscore.vert-center(count-up cu-end-val="user.plantScore" cu-changing-val="{{user.plantScore}}")
 		div.cred-change
-			p#cred-change.vert-center(count-up tu-cscore="user.scoreChange")
+			p#cred-change.vert-center(count-up cu-end-val="user.scoreChange")
 	video-panel(videourl="/videos/tree.mp4" percentage="{{user.plantScore}}" animate-video="user.plantScore")
 div.credit-dashboard
 	div.dash-base.cred-summary.clearfix
 		div.col-md-3.summary-cell 
 			p Total
-			h2 {{ user.loanBalance | currency:"$":0 }}
+			h2#lbalance(count-up cu-end-val="user.loanBalance") {{ user.loanBalance | currency:"$":0 }}
 		div.col-md-3.summary-cell 
 			p Payments
 			h2 {{ user.payments }}
