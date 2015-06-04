@@ -132,10 +132,16 @@ img#logo {
 	border-right: solid;
 	border-width: 25px;
 	border-color: white;
-	background-color: red;
+	background-color: #f17123;
 	float: left;
 	width: 25%;
 	height: 106.111px;
+}
+
+.sim-wrap {
+	color: white;
+	padding: 0 10px;
+	font-size: .9em;
 }
 
 .sim-active {

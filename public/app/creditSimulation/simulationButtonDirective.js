@@ -2,6 +2,7 @@ app.directive('simulationButton', function(){
 	return {
 		restrict: 'E',
 		templateUrl: '/partials/simulationButton.jade',
+		transclude: true,
 		scope: {
 			scoreChange: "@",
 			onActivate: "&method"

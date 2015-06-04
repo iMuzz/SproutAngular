@@ -25,12 +25,20 @@ div.credit-dashboard
 	div.dash-base.credit-simulation(ng-controller="simulationCtrl")
 		div
 			div.clearfix.sim-row.first-row
-				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
-				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
-				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
-				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text PAY OFF ALL CREDIT CARDS
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text PAY BILLS ON TIME
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text OPEN NEW CARD
+				simulation-button(score-change="-200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text ADD PUBLIC RECORD
 			div.clearfix.sim-row
-				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
-				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
-				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")			
-				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)")
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text ADD NEW AUTO LOAN			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text ADD NEW MORTAGE			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text CLOSE OLDEST CREDIT CARD			
+				simulation-button(score-change="200" method="modifyPlantScore(scoreChange)") 
+					span.sim-text INCREASE CREDIT LIMIT
