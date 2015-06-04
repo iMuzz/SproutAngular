@@ -7,7 +7,11 @@ html, body{
 
 body {
 	min-height: 100%;
-	font: 14px myFirstFont,Helvetica,Arial,sans-serif;
+	font-family: myFirstFont, Helvetica, Arial, sans-serif;
+}
+
+.font-white {
+	color: white;
 }
 
 .vert-center {
@@ -33,11 +37,56 @@ body {
 	width: 1000px;
 	margin: 0 auto;
 }
+
+/*Left side Credit Health*/
+
 .credit-health {
 	width: 300px;
 	position: fixed;
 	top: 25px;
 }
+
+#my-video {
+	width: 100%;
+	height: 100%;
+}
+img#logo {
+	width: 100%;
+	height: 150px;
+}
+
+.cred-score-container {
+	margin-top: 5px;
+}
+
+.cred-score-container div {
+	height: 70px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+.cred-score-container div p{
+	font-size: 40px;
+}
+
+.cred-score {
+	background-color: #FCD800;
+	border-right: solid;
+	border-width: 10px;
+	border-color: #0295be;
+	width: 60%;
+	float: left;
+	color: white;
+}
+
+.cred-change {
+	background-color: white;
+	width: 40%;
+	float: right;
+    color: #A9D961;
+}
+
+/*Right Side credit Dashboard*/
 
 .credit-dashboard {
 	height: 100%;
@@ -45,10 +94,6 @@ body {
 	float: right;
 }
 
-img#logo {
-	width: 100%;
-	height: 170px;
-}
 
 .summary-cell {
 	height: 60px;
@@ -91,10 +136,6 @@ img#logo {
 	float: left;
 	width: 25%;
 	height: 106.111px;
-}
-#my-video {
-	width: 100%;
-	height: 100%;
 }
 
 .sim-active {
