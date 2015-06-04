@@ -6,7 +6,7 @@ div.credit-health
 		div.cred-score 
 			p#cscore.vert-center(count-up tu-cscore="user.plantScore" tu-val="{{user.plantScore}}")
 		div.cred-change
-			p.vert-center +{{ user.plantScore }}
+			p.vert-center +{{ user.scoreChange }}
 	video-panel(videourl="/videos/tree.mp4" percentage="{{user.plantScore}}" animate-video="user.plantScore")
 div.credit-dashboard
 	div.dash-base.cred-summary.clearfix
