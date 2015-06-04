@@ -24,7 +24,6 @@ app.directive('animateVideo', function($interval){
 			}
 
 			var resumeToSec = function(stopTime){
-				console.log(stopTime)
 				endTime = stopTime;
 				video.addEventListener("timeupdate", pauseAtTime);
 				video.play();
@@ -64,6 +63,7 @@ app.directive('animateVideo', function($interval){
 			}, 1000);
 
 			scope.$watch(attrs['animateVideo'], function(newVal, oldVal){
+				console.log("animate-video was change to", newVal)
 				if (newVal > oldVal) {
 					resumeToSec(percentageToSeconds(calculatePercentage(newVal)));
 				} else {
