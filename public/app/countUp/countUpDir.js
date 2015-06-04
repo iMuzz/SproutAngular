@@ -13,14 +13,16 @@ app.directive("countUp", function(){
 				animation.start();
 			}
 
-			var watchInitializing = true;
-			scope.$watch(function() { return attrs["tuVal"]; }, function(newVal, oldVal){
-				if (watchInitializing) {
-					watchInitializing = false;
-				} else {
-					changeTo(newVal, oldVal);
-				};
-			});
+			if (attrs["tuVal"] !== undefined ) {
+				var watchInitializing = true;
+				scope.$watch(function() { return attrs["tuVal"]; }, function(newVal, oldVal){
+					if (watchInitializing) {
+						watchInitializing = false;
+					} else {
+						changeTo(newVal, oldVal);
+					};
+				});
+			};
 		}
 	}
 });
