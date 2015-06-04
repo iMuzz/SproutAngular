@@ -4,8 +4,8 @@ div.credit-health
 	h4.font-white You Credit Score
 	div.cred-score-container.clearfix
 		div.cred-score 
-			p.vert-center {{ user.plantScore }}
-		div.cred-change 
+			p#cscore.vert-center(count-up tu-cscore="user.plantScore" tu-val="{{user.plantScore}}")
+		div.cred-change
 			p.vert-center +{{ user.scoreChange }}
 	video-panel(videourl="/videos/tree.mp4" percentage="{{user.plantScore}}" animate-video="user.plantScore")
 div.credit-dashboard
