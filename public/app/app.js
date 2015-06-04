@@ -13,13 +13,4 @@ app.config(function($routeProvider, $locationProvider){
 
 app.controller('dashCtrl', ['$scope', 'UserData', function($scope, UserData){
 	$scope.user = UserData;
-
-	var options = {
-	  useEasing : true, 
-	  useGrouping : true, 
-	  separator : ',', 
-	  decimal : '.', 
-	  prefix : '', 
-	  suffix : '' 
-	};
 }]);

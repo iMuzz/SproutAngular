@@ -43,7 +43,7 @@ body {
 .credit-health {
 	width: 300px;
 	position: fixed;
-	top: 25px;
+	top: -25px;
 }
 
 #my-video {
@@ -85,8 +85,15 @@ img#logo {
 	float: right;
     color: #A9D961;
 }
+#cred-change:before {
+  content: '+';
+}
 
 /*Right Side credit Dashboard*/
+
+#lbalance:before {
+  content: '$';
+}
 
 .credit-dashboard {
 	height: 100%;
@@ -132,12 +139,18 @@ img#logo {
 	border-right: solid;
 	border-width: 25px;
 	border-color: white;
-	background-color: red;
+	background-color: #f17123;
 	float: left;
 	width: 25%;
 	height: 106.111px;
 }
 
+.sim-wrap {
+	color: white;
+	padding: 0 10px;
+	font-size: .9em;
+}
+
 .sim-active {
-	background-color: blue;
+	background-color: #a9d161;
 }
