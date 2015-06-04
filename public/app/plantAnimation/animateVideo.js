@@ -37,14 +37,15 @@ app.directive('animateVideo', function($interval){
 			}
 
 			var percentageToSeconds = function(inputPercentage){
-				return inputPercentage * video.duration
+				// this '-1' is a hack and needs to be removed
+				return ((inputPercentage * video.duration) - 1);
 			}
 
 			var rewindToSeconds = function(seconds){
 				var currTime = video.currentTime * 100 | 0;
 				var seconds = seconds * 100 | 0;
 				function frame(){
-					currTime -= 5;
+					currTime -= 1;
 					video.currentTime = currTime / 100;
 
 					if (currTime <= seconds) {
@@ -56,14 +57,12 @@ app.directive('animateVideo', function($interval){
 			}
 
 			setTimeout(function(){ 
-				initialPlayToPerc = calculatePercentage(attrs['percentage']);
-				scope.vidLength = video.duration;
-				resumeToSec(initialPlayToPerc * scope.vidLength);
+				resumeToSec(percentageToSeconds(calculatePercentage(attrs['percentage'])));
+				video.playbackRate = .5;
 				video.play();
 			}, 1000);
 
 			scope.$watch(attrs['animateVideo'], function(newVal, oldVal){
-				// console.log("animate-video was change to", newVal)
 				if (newVal > oldVal) {
 					resumeToSec(percentageToSeconds(calculatePercentage(newVal)));
 				} else {
