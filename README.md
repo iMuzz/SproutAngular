@@ -4,11 +4,11 @@ An interactive credit simulator that allows the user to play around with possibi
 ##To run the application:
 
 ```
-$> npm install
+$ npm install
 ```
 ```
-$> bower install
+$ bower install
 ```
 ```
-$> node ./server/bin/www
+$ node ./server/bin/www
 ```
