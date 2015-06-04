@@ -43,7 +43,7 @@ body {
 .credit-health {
 	width: 300px;
 	position: fixed;
-	top: 25px;
+	top: -25px;
 }
 
 #my-video {
@@ -84,6 +84,9 @@ img#logo {
 	width: 40%;
 	float: right;
     color: #A9D961;
+}
+#cred-change:before {
+  content: '+';
 }
 
 /*Right Side credit Dashboard*/
@@ -145,5 +148,5 @@ img#logo {
 }
 
 .sim-active {
-	background-color: blue;
+	background-color: #a9d161;
 }
