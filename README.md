@@ -10,5 +10,5 @@ $ npm install
 $ bower install
 ```
 ```
-$ node ./server/bin/www
+$ npm start
 ```
